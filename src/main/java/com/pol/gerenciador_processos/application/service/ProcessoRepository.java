@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Service
 public interface ProcessoRepository {
-    List<Processo> findAll();
+    List<Processo> obterTodos();
 
     Optional<Processo> obterPelo(Long numero);
 

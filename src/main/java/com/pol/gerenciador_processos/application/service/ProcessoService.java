@@ -21,7 +21,7 @@ public class ProcessoService {
     }
 
     public ResponseEntity<List<ProcessoDTO>> obterTodos() {
-        List<Processo> processos = repository.findAll();
+        List<Processo> processos = repository.obterTodos();
         List<Processo> processosNaoRemovidos = processos.stream()
                 .filter(processo -> !processo.isRemovido())
                 .toList();
